@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/mob-menu.css">
+</head>
+<body>
+  <header id="nav-header">
+    <div class="header-row">
+      <div class="header-left">
+
+        <div class="logo-container">
+          <a href="../index.html" class="logo-link">
+            <img src="../images/d-logo.png" alt="Natural Store" class="logo logo-desktop" />
+            <img src="../images/logo.png" alt="NS" class="logo logo-mobile" />
+          </a>
+        </div>
+
+        <div id="search-container">
+          <form id="search-form" >
+            <input type="text" name="search" id="search-box" placeholder="Search products..." autocomplete="off" />
+            <button type="submit" class="search-icon" aria-label="Search">
+              🔍
+            </button>
+          </form>
+
+          <ul class="suggestions" id="suggestion-list">
+            <li onclick="window.location.href='snacks.html'">Healthy Snacks</li>
+            <li onclick="window.location.href='foodProduct.html'">Organic Food products</li>
+            <li onclick="window.location.href='hair&skin-care.html'">Natural Soap</li>
+            <li onclick="window.location.href='women-clothing.html'">Women Wear</li>
+            <li onclick="window.location.href='home-decor.html'">Decorative items</li>
+            <li onclick="window.location.href='honey.html'">honey and sweets</li>
+            <li onclick="window.location.href='men-clothing.html'">Men clothes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mobile-nav-wrapper" id="menu-wrapper">
+      <div id="cart-icon">
+        <a href="cart.html" title="Shopping Cart" class="toggle-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path d="M23 1h-4l-2.68 13.39a2 2 0 0 1-2 1.61H4.6a2 2 0 0 1-2-1.61L1 6h17" />
+          </svg>
+        </a>
+
+        <button id="toggle-btn">
+          <a>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="10" r="3" />
+              <path d="M6 18c1.5-3 9-3 12 0" />
+            </svg>
+          </a>
+
+        </button>
+      </div>
+
+      <div class="mobile-nav" id="mobile-nav">
+        <div class="sub-menu">
+          <div class="user-info">
+          
+            <h4> Hello User </h4>
+          </div>
+          <hr>
+
+          <a href="cart.html" class="sub-menu-link">
+
+            <p>Cart</p>
+            <span>></span>
+          </a>
+
+          <a href="order.html" class="sub-menu-link">
+
+            <p>Orders</p>
+            <span>></span>
+          </a>
+
+          <a href="about.html" class="sub-menu-link">
+            <p>About</p>
+            <span>></span>
+          </a>
+
+          <a href="#" class="sub-menu-link">
+            <p>Logout</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <nav id="header-right">
+
+
+      <a href="login.html" title="User" class="nav-pic-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" />
+          <circle cx="12" cy="10" r="3" />
+          <path d="M6 18c1.5-3 9-3 12 0" />
+        </svg>
+      </a>
+      <a href="cart.html" title="Shopping Cart" class="nav-pic-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+          <path d="M23 1h-4l-2.68 13.39a2 2 0 0 1-2 1.61H4.6a2 2 0 0 1-2-1.61L1 6h17" />
+        </svg>
+      </a>
+      <a href="order.html" class="nav-icon">Orders</a>
+      <a href="about.html" class="nav-icon">About</a>
+      
+
+
+    
+    </nav>
+  </header>
+  
+  <div class="container">
+    <div class="cart-section">
+      <h2>Shopping Cart</h2>
+
+      <!-- Cart Item 1,mnj -->
+      <div class="cart-item">
+        <div class="product">
+          <img src="https://cdn.shopify.com/s/files/1/0754/2076/2396/files/6_aed0a150-f93e-4cf8-9fd9-7a201eeb2268_1024x1024.png?v=1688103571" alt="Product">
+          <div class="product-details">
+            <span id="product-name"><h5>Jute Shopping Bag</span></h5>
+            <div class="quantity">
+              <button>-</button>
+              <input type="text" value="2">
+              <button>+</button>
+            </div>
+            <div class="price-total">
+              <span class="price">Price: ₹599</span>
+              <span class="price">Total: ₹1198</span>
+            </div>
+            <a href="#">Remove</a>
+          </div>
+        </div>
+        </div>
+        <div class="cart-item">
+        <div class="product">
+          <img src="https://i.pinimg.com/736x/8f/a8/4e/8fa84ef0cd1f672ed4911f1f45ae9cfb.jpg" alt="Product">
+          <div class="product-details">
+            <span id="product-name"><h5>Moro Candle Holders</span></h5>
+            <div class="quantity">
+              <button>-</button>
+              <input type="text" value="1">
+              <button>+</button>
+            </div>
+            <div class="price-total">
+              <span class="price">Price: ₹799</span>
+              <span class="price">Total: ₹799</span>
+            </div>
+             <a href="#">Remove</a>
+          </div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <div class="product">
+          <img src="https://i.pinimg.com/736x/68/ba/93/68ba93e1a5ad6110591612cf9fc3f9eb.jpg" alt="Product">
+          <div class="product-details">
+            <span id="product-name"><h5>Diy Wooden Wall-Mirror</span></h5>
+            <div class="quantity">
+              <button>-</button>
+              <input type="text" value="3">
+              <button>+</button>
+            </div>
+            <div class="price-total">
+              <span class="price">Price: ₹699</span>
+              <span class="price">Total: ₹2,097</span>
+            </div>
+             <a href="#">Remove</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Similar structure for other cart items... -->
+
+      <a href="#" class="continue-shopping">← Continue Shopping</a>
+    </div>
+
+    <div class="summary-section">
+      <h2>Order Summary</h2>
+      <div>ITEMS <span>3</span></div>
+      <label for="shipping">SHIPPING</label>
+      <select id="shipping">
+        <option>Standard - ₹50</option>
+        <option>Fast - ₹200</option>
+      </select>
+
+      <label for="promo">PROMO CODE</label>
+      <input type="text" id="promo" placeholder="Enter your code">
+      <button class="apply-btn">APPLY</button>
+
+      <div class="total-cost">
+        <p>TOTAL COST</p>
+        <h3>₹2,701</h3>
+      </div>
+
+      <button class="checkout-btn">CHECKOUT</button>
+    </div>
+  </div>
+
+    <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box about">
+        <h2>Organic Farm</h2>
+        <p>
+          We provide fresh, organic, and healthy food directly from the farm
+          to your table.
+        </p>
+      </div>
+      <div class="footer-box link-group">
+        <div class="footer-subbox">
+          <h2>HELP</h2>
+          <ul type="none">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Return & Cancellation</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </div>
+        <div class="footer-subbox">
+          <h2>Quick Links</h2>
+          <ul type="none">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Women Empowerment</a></li>
+            <li><a href="#">Our Story</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-container footer-second">
+
+      <div class="footer-box contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@organicfarm.com</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Location: India</p>
+        <p>Address: Mahadev Colony Senda Road ,Beawar,Rajasthan</p>
+      </div>
+
+      <div class="footer-box social">
+        <h2>Follow us</h2>
+        <div class="social-icons">
+          <i1 class="fa-brands fa-square-facebook"></i1>
+          <i2 class="fa-brands fa-instagram"></i2>
+          <i3 class="fa-brands fa-youtube"></i3>
+          <i4 class="fa-brands fa-square-twitter"></i4>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Organic Farm. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../js/searchBar.js"></script>
+  <script src="../js/cart.js"></script>
+</body>
+
+</html>

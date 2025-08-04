@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register Page</title>
+  <link rel="stylesheet" href="../css/register.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section>
+    <header>Natural Store</header>
+  </section>
+
+  <div class="leftside">
+    <h3>Create Account</h3>
+    <p>Register to get started.</p>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <button type="submit">Register</button>
+
+      <!-- This section is merged in mobile -->
+      <div class="mobile-link">
+        <p>Already have an account?</p>
+        <a href="login.html">Login</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="rightside">
+    <p>Already have an account?</p>
+    <a href="login.html">Login</a>
+  </div>
+
+  <!-- Script to redirect after registration -->
+  <script>
+    document.querySelector("form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="../css/login.css" />
+</head>
+<body>
+  
+  <section>
+    <header>Natural Store</header>
+  </section>
+
+  <div class="leftside">
+    <h3>Welcome</h3>
+    <p>Login into your Account.</p>
+    <form>
+      <input type="email" placeholder="Enter your E-mail" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
+    </form>
+  </div>
+
+  <div class="rightside">
+    <div class="register-box">
+      <div class="desktop">
+      <h1>New Here?</h1>
+      </br>
+      <p>sign up and discover a great amount of new oppurtunity</p>
+      </div>
+      <div class="mobile"><p>Don't have an account?</p></div>
+      <a href="register.html">Register Now</a>
+    </div>
+  </div>
+  <script>
+  document.querySelector("form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const email = document.querySelector("input[type='email']").value.trim();
+    const password = document.querySelector("input[type='password']").value.trim();
+
+    if (email && password) {
+      // Here you could add your real login check (API call etc.)
+      window.location.href = "../index.html";
+    } else {
+      alert("Please fill in both email and password.");
+    }
+  });
+  </script>
+
+</body>
+</html>

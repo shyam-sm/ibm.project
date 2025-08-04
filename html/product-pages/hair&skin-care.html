@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Natural Store — Product Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../../css/footer.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/product.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header id="nav-header">
+    <div class="header-row">
+      <div class="header-left">
+
+        <div class="logo-container">
+          <a href="../../index.html" class="logo-link">
+            <img src="../../images/d-logo.png" alt="Natural Store" class="logo logo-desktop" />
+            <img src="../../images/logo.png" alt="NS" class="logo logo-mobile" />
+          </a>
+        </div>
+
+        <div id="search-container">
+          <form id="search-form" >
+            <input type="text" name="search" id="search-box" placeholder="Search products..." autocomplete="off" />
+            <button type="submit" class="search-icon" aria-label="Search">
+              🔍
+            </button>
+          </form>
+
+          <ul class="suggestions" id="suggestion-list">
+            <li onclick="window.location.href='snacks.html'">Healthy Snacks</li>
+            <li onclick="window.location.href='foodProduct.html'">Organic Food products</li>
+            <li onclick="window.location.href='hair&skin-care.html'">Natural Soap</li>
+            <li onclick="window.location.href='women-clothing.html'">Women Wear</li>
+            <li onclick="window.location.href='home-decor.html'">Decorative items</li>
+            <li onclick="window.location.href='honey.html'">honey and sweets</li>
+            <li onclick="window.location.href='men-clothing.html'">Men clothes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mobile-nav-wrapper" id="menu-wrapper">
+      <div id="cart-icon">
+        <a href="../cart.html" title="Shopping Cart" class="toggle-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path d="M23 1h-4l-2.68 13.39a2 2 0 0 1-2 1.61H4.6a2 2 0 0 1-2-1.61L1 6h17" />
+          </svg>
+        </a>
+
+        <button id="toggle-btn">
+          <a>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="10" r="3" />
+              <path d="M6 18c1.5-3 9-3 12 0" />
+            </svg>
+          </a>
+
+        </button>
+      </div>
+
+      <div class="mobile-nav" id="mobile-nav">
+        <div class="sub-menu">
+          <div class="user-info">
+          
+            <h4> Hello User </h4>
+          </div>
+          <hr>
+
+          <a href="../cart.html" class="sub-menu-link">
+
+            <p>Cart</p>
+            <span>></span>
+          </a>
+
+          <a href="../order.html" class="sub-menu-link">
+
+            <p>Orders</p>
+            <span>></span>
+          </a>
+
+          <a href="../about.html" class="sub-menu-link">
+            <p>About</p>
+            <span>></span>
+          </a>
+
+          <a href="#" class="sub-menu-link">
+            <p>Logout</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <nav id="header-right">
+
+
+      <a href="../login.html" title="User" class="nav-pic-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" />
+          <circle cx="12" cy="10" r="3" />
+          <path d="M6 18c1.5-3 9-3 12 0" />
+        </svg>
+      </a>
+      <a href="../cart.html" title="Shopping Cart" class="nav-pic-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+          <path d="M23 1h-4l-2.68 13.39a2 2 0 0 1-2 1.61H4.6a2 2 0 0 1-2-1.61L1 6h17" />
+        </svg>
+      </a>
+      <a href="../order.html" class="nav-icon">Orders</a>
+      <a href="../about.html" class="nav-icon">About</a>
+      
+
+
+    
+    </nav>
+  </header>
+
+  <!-- Toast Message -->
+<div id="cart-toast" class="toast">Added to cart ✅</div>
+
+  <div id="whole-body">
+    <div class="container">
+      <section class="sidebar">
+        <h3>Filters</h3>
+        <div class="filter-group">
+          <h4>Category</h4>
+          <label><input type="checkbox"> Clothes</label>
+          <label><input type="checkbox"> Footwear</label>
+          <label><input type="checkbox"> Kitchen</label>
+        </div>
+        <div class="filter-group">
+          <h4>Price</h4>
+          <label><input type="radio" name="price"> Under ₹500</label>
+          <label><input type="radio" name="price"> ₹500 - ₹2000</label>
+          <label><input type="radio" name="price"> Above ₹2000</label>
+          <h4>Size</h4>
+          <label><input type="radio" name="Size"> XS</label>
+          <label><input type="radio" name="Size"> S</label>
+          <label><input type="radio" name="Size"> M</label>
+          <h4>Colour</h4>
+          <label><input type="radio" name="Colour"> Black</label>
+          <label><input type="radio" name="Colour"> White</label>
+          <label><input type="radio" name="Colour"> Blue</label>
+        </div>
+      </section>
+
+
+      <main class="product-grid">
+        <div class="product-card">
+          <img
+            src="https://5.imimg.com/data5/GR/TW/GI/SELLER-77799695/herbal-shampoo.jpg"
+            alt="Product" class="product-grid image">
+          <h4>Herbal Shampoo</h4>
+          <p class="price">₹500</p>
+          <p class="Gram">250gm</p>
+          <p class="rating">⭐ 4.4</p>
+          <button class="buy-cart-button">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://th.bing.com/th/id/OIP.cARNMvD1kt-rJdoNj_vUvgHaHa?w=192&h=192&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3"
+            alt="Product" class="product-grid image">
+          <h4>Almond Oil</h4>
+          <p class="price">₹299</p>
+          <p class="Gram">150gm</p>
+          <p class="rating">⭐ 5.4</p>
+          <button class="buy-cart-button">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.Ze7tWmofi94JEdDlnr7FLwHaJf?w=1998&h=2560&rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="Product" class="product-grid image">
+          <h4>Natural Face Scrub</h4>
+          <p class="price">₹199</p>
+          <p class="Gram">450gm</p>
+          <p class="rating">⭐ 3.5</p>
+          <button class="buy-cart-button">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="https://images.mamaearth.in/catalog/product/n/e/neem_face_mask_1.jpg?format=auto&height=600"
+            class="product-grid image">
+          <h4>Neem Face Pack</h4>
+          <p class="price">₹599</p>
+          <p class="Gram">210gm</p>
+          <p class="rating">⭐ 4.5</p>
+          <button class="buy-cart-button">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="https://haappyherbs.com/cdn/shop/files/turmericcream-5.jpg?v=1751769917&width=900"
+            alt="Product" class="product-grid image">
+          <h4>Turmeric Night Cream</h4>
+          <p class="price">₹450</p>
+          <p class="Gram">500gm</p>
+          <p class="rating">⭐ 4.4</p>
+          <button class="buy-cart-button">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://www.vilvahstore.com/cdn/shop/files/1_2.jpg?v=1739345584&width=600"
+            alt="Product" class="product-grid image">
+          <h4>Face Brightening Combo</h4>
+          <p class="price">₹150</p>
+          <p class="Gram">500gm</p>
+          <p class="rating">⭐ 4.4</p>
+          <button class="buy-cart-button">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSXDDouWwNGj5TZH14BPWEakQz3MeRWoz_0u4tb62D7sbwCe2PA8el8VxI2Q7L7wAZZgetAVHR_qJLNErsSjl7v8466eV-sNAIcLAUkIAf3Uo_q6LdnKhgF-w"
+            alt="Product" class="product-grid image">
+          <h4>BellaVita Vitamin C Serum</h4>
+          <p class="price">₹699</p>
+          <p class="Gram">800gm</p>
+          <p class="rating">⭐ 4.6</p>
+          <button class="buy-cart-button">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQen75gRs2uSrJ02DRJN5uV-6lHHIU46YGrtWFHecJmXTQuCgxYAFbaqiBT6DWQ03mAboyTCJfqtyv13WGiCAOsUPeg4eg51T-rUyzhH_HxelAyHRZyM2u-"
+            alt="Product" class="product-grid image">
+          <h4>Bella Vita Moisturizer</h4>
+          <p class="price">₹99</p>
+          <p class="Gram">80gm</p>
+          <p class="rating">⭐ 4.1</p>
+          <button class="buy-cart-button">Add to Cart</button>
+        </div>
+      
+      </main>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box about">
+        <h2>Organic Farm</h2>
+        <p>
+          We provide fresh, organic, and healthy food directly from the farm
+          to your table.
+        </p>
+      </div>
+      <div class="footer-box link-group">
+        <div class="footer-subbox">
+          <h2>HELP</h2>
+          <ul type="none">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Return & Cancellation</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </div>
+        <div class="footer-subbox">
+          <h2>Quick Links</h2>
+          <ul type="none">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Women Empowerment</a></li>
+            <li><a href="#">Our Story</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-container footer-second">
+
+      <div class="footer-box contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@organicfarm.com</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Location: India</p>
+        <p>Address: Mahadev Colony Senda Road ,Beawar,Rajasthan</p>
+      </div>
+
+      <div class="footer-box social">
+        <h2>Follow us</h2>
+        <div class="social-icons">
+          <i1 class="fa-brands fa-square-facebook"></i1>
+          <i2 class="fa-brands fa-instagram"></i2>
+          <i3 class="fa-brands fa-youtube"></i3>
+          <i4 class="fa-brands fa-square-twitter"></i4>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Organic Farm. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/searchBar.js"></script>
+  <script src="../../js/product.js"></script>
+</body>
+
+</html>

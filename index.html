@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natural Products Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="css/mob-menu.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/carousel.css">
+
+</head>
+
+
+<body>
+  <header id="nav-header">
+    <div class="header-row">
+      <div class="header-left">
+
+        <div class="logo-container">
+          <a href="index.html" class="logo-link">
+            <img src="images/d-logo.png" alt="Natural Store" class="logo logo-desktop" />
+            <img src="images/logo.png" alt="NS" class="logo logo-mobile" />
+          </a>
+        </div>
+
+        <div id="search-container">
+          <form id="search-form" >
+            <input type="text" name="search" id="search-box" placeholder="Search products..." autocomplete="off" />
+            <button type="submit" class="search-icon" aria-label="Search">
+              🔍
+            </button>
+          </form>
+
+          <ul class="suggestions" id="suggestion-list">
+            <li onclick="window.location.href='product-pages/snacks.html'">Healthy Snacks</li>
+            <li onclick="window.location.href='product-pages/foodProduct.html'">Organic Food products</li>
+            <li onclick="window.location.href='product-pages/hair&skin-care.html'">Natural Soap</li>
+            <li onclick="window.location.href='product-pages/women-clothing.html'">Women Wear</li>
+            <li onclick="window.location.href='product-pages/home-decor.html'">Decorative items</li>
+            <li onclick="window.location.href='product-pages/honey.html'">honey and sweets</li>
+            <li onclick="window.location.href='product-pages/men-clothing.html'">Men clothes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mobile-nav-wrapper" id="menu-wrapper">
+      <div id="cart-icon">
+        <a href="cart.html" title="Shopping Cart" class="toggle-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path d="M23 1h-4l-2.68 13.39a2 2 0 0 1-2 1.61H4.6a2 2 0 0 1-2-1.61L1 6h17" />
+          </svg>
+        </a>
+
+        <button id="toggle-btn">
+          <a>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="10" r="3" />
+              <path d="M6 18c1.5-3 9-3 12 0" />
+            </svg>
+          </a>
+
+        </button>
+      </div>
+
+      <div class="mobile-nav" id="mobile-nav">
+        <div class="sub-menu">
+          <div class="user-info">
+          
+            <h4> Hello User </h4>
+          </div>
+          <hr>
+
+          <a href="cart.html" class="sub-menu-link">
+
+            <p>Cart</p>
+            <span>></span>
+          </a>
+
+          <a href="order.html" class="sub-menu-link">
+
+            <p>Orders</p>
+            <span>></span>
+          </a>
+
+          <a href="about.html" class="sub-menu-link">
+            <p>About</p>
+            <span>></span>
+          </a>
+
+          <a href="#" class="sub-menu-link">
+            <p>Logout</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <nav id="header-right">
+
+
+      <a href="login.html" title="User" class="nav-pic-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" />
+          <circle cx="12" cy="10" r="3" />
+          <path d="M6 18c1.5-3 9-3 12 0" />
+        </svg>
+      </a>
+      <a href="cart.html" title="Shopping Cart" class="nav-pic-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+          <path d="M23 1h-4l-2.68 13.39a2 2 0 0 1-2 1.61H4.6a2 2 0 0 1-2-1.61L1 6h17" />
+        </svg>
+      </a>
+      <a href="order.html" class="nav-icon">Orders</a>
+      <a href="about.html" class="nav-icon">About</a>
+      
+
+
+    
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1 id="hero-h1">Pure & Organic Products</h1>
+    <p id="hero-p">Handpicked from nature — for your wellness</p>
+  </section>
+
+  <section class="organic-section" aria-label="Organic product categories">
+    <div class="organic-item product-connector" data-url="product-pages/foodProduct.html">
+      <div class="organic-circle">
+        <img src="images/wheat.png" alt="Outline drawing of a glass bottle of organic oil with an olive branch"
+          class="organic-img" onerror="this.style.display='none'" />
+      </div>
+      <div class="organic-caption product-connector">Organic Wheats</div>
+    </div>
+
+    <div class="organic-item product-connector" data-url="product-pages/hair&skin-care.html">
+      <div class="organic-circle">
+        <img src="images/oilbot.png" alt="Outline drawing of a sack of organic flour with wheat symbol on front"
+          class="organic-img" onerror="this.style.display='none'" />
+      </div>
+      <div class="organic-caption">Organic Skin Care</div>
+    </div>
+
+    <div class="organic-item product-connector" data-url="product-pages/home-decor.html">
+      <div class="organic-circle">
+        <img src="images/homedeco.png" alt="Outline drawing of organic rice grains arranged randomly"
+          class="organic-img" onerror="this.style.display='none'" />
+      </div>
+      <div class="organic-caption">Home Items</div>
+    </div>
+
+    <div class="organic-item product-connector" data-url="product-pages/honey.html">
+      <div class="organic-circle">
+        <img src="images/honey.png" alt="Outline drawing of several round organic millets scattered"
+          class="organic-img" onerror="this.style.display='none'" />
+      </div>
+      <div class="organic-caption">Organic Honey</div>
+    </div>
+
+    <div class="organic-item product-connector" data-url="product-pages/women-clothing.html">
+      <div class="organic-circle">
+        <img src="images/womenwera.png"
+          alt="Outline drawing of jar with organic pickles inside with a lemon and cucumber on label"
+          class="organic-img" onerror="this.style.display='none'" />
+      </div>
+      <div class="organic-caption">Women Wear</div>
+    </div>
+
+    <div class="organic-item item-hidden-inphone product-connector" data-url="product-pages/foodProduct.html">
+      <div class="organic-circle">
+        <img src="images/ghee.png"
+          alt="Outline drawing of a jar of organic cow desi ghee with a honey dipper and bowl" class="organic-img"
+          onerror="this.style.display='none'" />
+      </div>
+      <div class="organic-caption">Food Products</div>
+    </div>
+    
+    <div class="organic-item product-connector" data-url="product-pages/men-clothing.html">
+      <div class="organic-circle">
+        <img src="images/manWear.png" alt="Outline drawing of organic dry fruits including sliced nuts and leaves"
+          class="organic-img" onerror="this.style.display='none'" />
+      </div>
+      <div class="organic-caption">Man Clothing</div>
+    </div>
+
+  </section>
+
+  <!-- Slider Section -->
+  <section class="section" id="slider-section" style="background: transparent">
+    <div class="slider-container">
+      <div class="slider-track">
+        <div class="slide product-connector" data-url="product-pages/home-decor.html">
+          <img src="images/slider-img-1.png" alt="Slide 1" />
+        </div>
+        <div class="slide product-connector" data-url="product-pages/women-clothing.html">
+          <img src="images/ow2.png" alt="Slide 2" />
+
+        </div>
+        <div class="slide product-connector" data-url="product-pages/foodProduct.html">
+          <img src="images/slide2.png" alt="Slide 3" />
+
+        </div>
+        <!-- Cloned first slide for smooth looping -->
+        <div class="slide product-connector" data-url="product-pages/women-clothing.html">
+          <img src="images/slider-img-1.png" alt="Slide 1" />
+
+        </div>
+      </div>
+      <button class="slider-btn prev">&#10094;</button>
+      <button class="slider-btn next">&#10095;</button>
+      <div class="slider-dots"></div>
+    </div>
+  </section>
+
+
+
+  <!-- Best Sellers Section -->
+  <section id="best-sellers">
+    <h2>Best Sellers</h2>
+    <div class="products best-sellers-list">
+
+      <div class="product product-connector" data-url="product-pages/honey.html">
+        <img src="https://www.nirvanaorganic.in/cdn/shop/articles/Forest-honey-jar.jpg?v=1734523514&width=1500"
+          alt="Organic Honey" class="product-img-rect">
+        <h3>Organic Honey</h3>
+        <p>Raw, unfiltered, and packed with nutrients.</p>
+        <button class="cta">Buy Now</button>
+      </div>
+
+      <div class="product  product-connector" data-url="product-pages/hair&skin-care.html">
+        <img src="https://5.imimg.com/data5/GR/TW/GI/SELLER-77799695/herbal-shampoo.jpg" Herbal Shampoo"
+          class="product-img-rect">
+        <h3>Herbal Shampoo</h3>
+        <p>Gentle cleansing with natural extracts.</p>
+        <button class="cta">Buy Now</button>
+      </div>
+      <div class="product product-connector" data-url="product-pages/hair&skin-care.html">
+        <img src="https://th.bing.com/th/id/OIP.cARNMvD1kt-rJdoNj_vUvgHaHa?w=192&h=192&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3"
+          alt="Cold-Pressed Almond Oil" class="product-img-rect">
+        <h3>Cold-Pressed Almond Oil</h3>
+        <p>Perfect for skin, hair, and cooking.</p>
+        <button class="cta">Buy Now</button>
+      </div>
+      <div class="product side-product product-connector" data-url="product-pages/hair&skin-care.html">
+        <img
+          src="https://tse2.mm.bing.net/th/id/OIP.Ze7tWmofi94JEdDlnr7FLwHaJf?w=1998&h=2560&rs=1&pid=ImgDetMain&o=7&rm=3"
+          alt="Organic Coconut Oil" class="product-img-rect">
+        <h3>Natural Face Scrub</h3>
+        <p>Exfoliates and brightens your skin.</p>
+        <button class="cta">Buy Now</button>
+      </div>
+
+      <div class="product product-connector " id="hidden-in-tab-1" data-url="product-pages/snacks.html">
+        <img src="https://ladakhbasket.com/wp-content/uploads/2019/09/Organic-Peppermint-Tea.jpg" alt="Herbal Tea"
+          class="product-img-rect">
+        <h3>Herbal Tea</h3>
+        <p>Boost immunity & detox naturally.</p>
+        <button class="cta">Buy Now</button>
+      </div>
+      <div class="product product-connector" id="hidden-in-tab-0" data-url="product-pages/hair&skin-care.html">
+        <img src="https://images.mamaearth.in/catalog/product/n/e/neem_face_mask_1.jpg?format=auto&height=600"
+          alt="Neem Face Pack" class="product-img-rect">
+        <h3>Neem Face Pack</h3>
+        <p>For clear and healthy skin.</p>
+        <button class="cta">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- ////////products///// -->
+  <section class="carousel-container" aria-label="Food">
+    <hedaer class="carousel-header">
+      <h2 class="carousel-title">Food</h2>
+      <svg class="main-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M9 18l6-6-6-6"></path>
+      </svg>
+    </hedaer>
+    <div class="carousel-scroll" id="carousel1" tabindex="0" aria-roledescription="carousel" aria-live="polite">
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/foodProduct.html">
+        <img
+          src="https://prodondcdoc.easypay.co.in/ondc_seller_product/EP_SELLER_YHH1LGR6JP/EP_SELLER_YHH1LGR6JP_IMG_1738232678418.png"
+          alt="Geared cycle bicycle white and black color photo" loading="lazy" />
+        <div class="carousel-label">
+          Urad Dal<br /><b>Up to 20% Off</b>
+        </div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/foodProduct.html">
+        <img
+          src="https://content3.jdmagicbox.com/v2/comp/surat/b4/0261px261.x261.230907153810.s9b4/catalogue/crispo-bites-organic-dry-fruits-adajan-dn-surat-dry-fruit-retailers-57k1xo3l74.jpg"
+          loading="lazy" />
+        <div class="carousel-label"> Organic Pistachio <br>
+          Dry Fruits<br /><b>Upto 75% Off</b></div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/foodProduct.html" >
+        <img src="https://sunandsoilorganic.com/wp-content/uploads/2024/01/1000102347.png"
+          alt="Nescafe coffee powder jar brown with red label" loading="lazy" />
+        <div class="carousel-label">
+          Coffee Powder<br /><b>Upto 80% Off</b>
+        </div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/foodProduct.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrf96iNZL1562PFZ9Y-a0Kxicqyw5zy-Ma8w&s"
+          alt="Black batman action figure with cape and pose" loading="lazy" />
+        <div class="carousel-label">
+          Organic Wheat Flour<br /><b>Up to 40% Off</b>
+        </div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/foodProduct.html">
+        <img src="https://organicindia.com/cdn/shop/products/492579991_Image1.jpg?v=1667906025" loading="lazy" />
+        <div class="carousel-label">
+
+          Organic Red Chilli Powder <br><b>Up to 80% Off</b>
+        </div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/foodProduct.html">
+        <img
+          src="https://organicindia.com/cdn/shop/files/jaggerypowder_2c31d5cb-1fcd-4b7d-9e01-60b86a4d9d1c.jpg?v=1746430569"
+          alt="Box filled with assorted colorful ballpoint pens for stationary" loading="lazy" />
+        <div class="carousel-label">
+          Jaggery Powder 500g <br /><b>At ₹72</b>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-nav left" aria-label="Scroll Left" id="leftBtn1">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button class="carousel-nav right" aria-label="Scroll Right" id="rightBtn1">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </section>
+  <section class="carousel-container" aria-label="Home decor & Furnishings">
+    <hedaer class="carousel-header">
+      <h2 class="carousel-title">Home Decor & Furnishings</h2>
+      <svg class="main-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M9 18l6-6-6-6"></path>
+      </svg>
+    </hedaer>
+    <div class="carousel-scroll" id="carousel1" tabindex="0" aria-roledescription="carousel" aria-live="polite">
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/home-decor.html" >
+        <img
+          src="https://brownliving.in/cdn/shop/files/sustainable-coconut-shell-candlediya-eco-friendly-scented-soy-wax-by-thenga-at-brownliving-596888.jpg?v=1732621390&width=600"
+          loading="lazy" />
+        <div class="carousel-label">
+          Coconut Shell Candle/Diya
+          <br /><b>Up to 20% Off</b>
+        </div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/home-decor.html" >
+        <img
+          src="https://brownliving.in/cdn/shop/files/handmade-macrame-yellow-brown-mirror-sarmaya-sustainable-wall-decor-brown-living-sar130-274167.jpg?v=1714118242&width=600"
+          alt="Packet of 100% natural California almonds with green packaging" loading="lazy" />
+        <div class="carousel-label">
+          Handmade Macrame Yellow-Brown Mirror<br /><b>Upto 15% Off</b></div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/home-decor.html" >
+        <img
+          src="https://brownliving.in/cdn/shop/products/bamboo-amplifier-natural-acoustic-speaker-with-cotton-pouch-tbb-88-indoor-outdoor-play-equipments-872087.jpg?v=1746256825&width=600"
+          alt="Nescafe coffee powder jar brown with red label" loading="lazy" />
+        <div class="carousel-label">
+          Bamboo Amplifier|Natural Acoustic Speaker<br /><b>Upto 80% Off</b>
+        </div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/home-decor.html" >
+        <img
+          src="https://brownliving.in/cdn/shop/products/wooden-handmade-cat-shaped-spectacle-holder-verified-sustainable-table-decor-on-brown-living-889375.jpg?v=1705484599&width=600"
+          alt="Black batman action figure with cape and pose" loading="lazy" />
+        <div class="carousel-label">
+
+          Wooden Handmade Cat Shaped Spectacle Holder
+          <br /><b> At Rs 399 only</b>
+        </div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/home-decor.html" >
+        <img
+          src="https://brownliving.in/cdn/shop/products/rectangular-wooden-multipurpose-tray-set-of-3-verified-sustainable-trays-platters-on-brown-living-712082.jpg?v=1743399339&width=600"
+          alt="Red remote control sports car toy with black controller" loading="lazy" />
+        <div class="carousel-label">
+
+          Rectangular Wooden Multipurpose Tray-Set of 3
+          <br /><b>At Rs 799 only</b>
+        </div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/home-decor.html" >
+        <img
+          src="https://brownliving.in/cdn/shop/files/sustainable-the-jazzy-planter-boho-chic-handcrafted-planter-by-artecasa-at-brownliving-516028.jpg?v=1746750077&width=600"
+          alt="Box filled with assorted colorful ballpoint pens for stationary" loading="lazy" />
+        <div class="carousel-label">
+
+          The Jazzy Planter-Boho Chic Handcrafted Planter
+          <br /><b>From ₹59</b>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-nav left" aria-label="Scroll Left" id="leftBtn1">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button class="carousel-nav right" aria-label="Scroll Right" id="rightBtn1">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </section>
+  <section class="carousel-container" aria-label="Beauty, Food, Toys & more">
+    <hedaer class="carousel-header">
+      <h2 class="carousel-title">clothes</h2>
+      <svg class="main-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M9 18l6-6-6-6"></path>
+      </svg>
+    </hedaer>
+    <div class="carousel-scroll" id="carousel1" tabindex="0" aria-roledescription="carousel" aria-live="polite">
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/men-clothing.html">
+        <img
+          src="https://brownliving.in/cdn/shop/files/sustainable-bamboo-fabric-navy-t-shirt-for-men-by-bamboology-at-brownliving-395990.png?v=1750407891&width=720"
+          alt="Geared cycle bicycle white and black color photo" loading="lazy" />
+        <div class="carousel-label">
+
+          Bamboo Fabric Navy T-shirt For Men Sale price<br /><b>Up to 20% Off</b>
+        </div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/men-clothing.html">
+        <img
+          src="https://brownliving.in/cdn/shop/files/1_807beb50-ef14-4d2a-ab5d-3933b803f732.png?v=1753861069&width=600"
+          alt="Packet of 100% natural California almonds with green packaging" loading="lazy" />
+        <div class="carousel-label">Men's
+          Aladdin Harem Pants<br /><b>Upto 45% Off</b></div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/women-clothing.html">
+        <img
+          src="https://brownliving.in/cdn/shop/files/sustainable-sun-kissed-shirt-bright-bold-statement-wear-by-tyas-at-brownliving-391103.jpg?v=1750737464&width=600"
+          alt="Nescafe coffee powder jar brown with red label" loading="lazy" />
+        <div class="carousel-label">
+
+          Sun Kissed Shirt–Bright & Bold Statement Wear
+
+
+          <br /><b></b>
+        </div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/women-clothing.html">
+        <img src="
+https://brownliving.in/cdn/shop/files/sustainable-selene-embroidered-black-kala-cotton-dress-by-expressions-by-uv-at-brownliving-523506.jpg?v=1748374893&width=600
+" alt="Black batman action figure with cape and pose" loading="lazy" />
+        <div class="carousel-label">
+
+          Selene Embroidered Black Kala Cotton Dress
+          <br /><b></b>
+        </div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/women-clothing.html">
+        <img
+          src="https://brownliving.in/cdn/shop/files/sustainable-firefly-denim-dress-sleek-stylish-casual-wear-by-tyas-at-brownliving-926113.jpg?v=1750737462&width=600"
+          alt="Red remote control sports car toy with black controller" loading="lazy" />
+        <div class="carousel-label">
+
+          Firefly Denim Dress–Sleek & Stylish Casual Wear
+          <br /><b></b>
+        </div>
+      </div>
+      <div class="carousel-item product-connector" role="group" data-url="product-pages/women-clothing.html">
+        <img src="https://bytheseacompany.com/cdn/shop/files/0442_websize.jpg?v=1746234757&width=1080"
+          alt="Box filled with assorted colorful ballpoint pens for stationary" loading="lazy" />
+        <div class="carousel-label">
+          White Shirt Pure Cotton<br /><b>From Rs 500 </b>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-nav left" aria-label="Scroll Left" id="leftBtn1">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button class="carousel-nav right" aria-label="Scroll Right" id="rightBtn1">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </section>
+
+
+
+
+  <section class="ad1-container product-connector" data-url="product-pages/home-decor.html">
+    <img src="images/adv-2.png" alt="Adv" id="ad1-img">
+  </section>
+
+
+
+  <main class="container" aria-label="Top deals and categories grid">
+    <section class="section">
+      <header class="section-header" id="fashion-header">
+        <span>Fashion's Top Deals</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M9 18l6-6-6-6"></path>
+        </svg>
+      </header>
+      <div class="items-grid">
+        <article class="item product-connector" data-url="product-pages/home-decor.html">
+          <img src="https://www.ethnicset.in/cdn/shop/files/184A9930.jpg?v=1704697606"
+            alt="Woman wearing elegant purple ethnic outfit with scarf on gray background" loading="lazy" />
+          <p class="item-title">Women's Ethnic Sets</p>
+          <p class="item-subtitle">Min. 50% Off</p>
+        </article>
+        <article class="item product-connector" data-url="product-pages/home-decor.html">
+          <img
+            src="https://i.pinimg.com/originals/17/fb/e1/17fbe1f1e13559146b9144bf31650bb2.jpg"
+            alt="Black, maroon and white striped men's T-shirt displayed flat on gray background" loading="lazy" />
+          <p class="item-title">Men's Kurtas</p>
+          <p class="item-subtitle">Min. 50% Off</p>
+        </article>
+        <article class="item product-connector" data-url="product-pages/home-decor.html">
+          <img src="https://image.hm.com/assets/hm/a4/c0/a4c0a3b7ff2afbc8b298c099e9285462e1324e43.jpg?imwidth=657"
+            alt="Man wearing maroon casual shirt posing against gray background" loading="lazy" />
+          <p class="item-title">Casual Shirts</p>
+          <p class="item-subtitle">Min. 50% Off</p>
+        </article>
+        <article class="item product-connector" data-url="product-pages/home-decor.html">
+          <img src="https://n.nordstrommedia.com/id/sr3/9addce34-38ad-4cb5-bafa-01f8f3443dd4.jpeg?h=365&w=240&dpr=2"
+            alt="Men's black and white slippers with buckle on plain background" loading="lazy" />
+          <p class="item-title">Women’s Pants & leggins </p>
+          <p class="item-subtitle">Min. 40% Off</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <header class="section-header" id="home-style-header">
+        <span>Make your home stylish</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M9 18l6-6-6-6"></path>
+        </svg>
+      </header>
+      <div class="items-grid">
+        <article class="item product-connector" data-url="product-pages/home-decor.html">
+          <img
+            src="https://ii1.pepperfry.com/media/catalog/product/c/a/764x840/carson-shoe-rack-with-seating-in-tan-finish-carson-shoe-rack-with-seating-in-tan-finish-s863s8.jpg"
+            alt="Blue shoe rack filled with folded clothes on white background" loading="lazy" />
+          <p class="item-title">Shoe Rack</p>
+          <p class="item-subtitle">Min. 20% Off</p>
+        </article>
+        <article class="item product-connector" data-url="product-pages/home-decor.html">
+          <img
+            src="https://ik.imagekit.io/2xkwa8s1i/img/npl_modified_images/WEWB/WEWB7860STAURUSWE/WEWB7860STAURUSWE_LS_1.jpg?tr=w-384"
+            alt="Metal bed frame with red and black woven mattress in bright room" loading="lazy" />
+          <p class="item-title">Beds</p>
+          <p class="item-subtitle">Min. 30% Off</p>
+        </article>
+        <article class="item product-connector" data-url="product-pages/home-decor.html">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/484fb1cb-f0f9-468d-90ea-3750609d000f.png"
+            alt="Black portable laptop table with laptop, smartphone, and coffee cup on white background"
+            loading="lazy" />
+          <p class="item-title">Portable Laptop Tables</p>
+          <p class="item-subtitle">Min. 25% Off</p>
+        </article>
+        <article class="item product-connector" data-url="product-pages/home-decor.html">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/101d83e7-83c6-4212-99c3-5325a40fd3d3.png"
+            alt="Blue and white penguin-shaped kid seating chair with safety straps" loading="lazy" />
+          <p class="item-title">Kid Seating</p>
+          <p class="item-subtitle">Min. 10% Off</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <header class="section-header" id="home-decor-header">
+        <span>50% off on Food Products</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M9 18l6-6-6-6"></path>
+        </svg>
+      </header>
+      <div class="items-grid">
+        <article class="item product-connector" data-url="product-pages/home-decor.html">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f391c478-e23d-440d-ab11-b8f11e881387.png"
+            alt="Decorative colorful peacock wall clock art" loading="lazy" />
+          <p class="item-title">Wall Clocks</p>
+          <p class="item-subtitle">Top Sellers</p>
+        </article>
+        <article class="item product-connector" data-url="product-pages/home-decor.html">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/90c09b5d-cd1a-4c9f-937a-8bfabe1a6b0c.png"
+            alt="Two white emergency bulbs with battery backup text" loading="lazy" />
+          <p class="item-title">Bulbs</p>
+          <p class="item-subtitle">Min. 50% Off</p>
+        </article>
+        <article class="item product-connector" data-url="product-pages/home-decor.html">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0ed2ac50-0341-4f6e-b5b7-165e4c0df23e.png"
+            alt="Multi-color woven mats in curved shapes on white background" loading="lazy" />
+          <p class="item-title">Mats</p>
+          <p class="item-subtitle">Min. 50% Off</p>
+        </article>
+        <article class="item product-connector" data-url="product-pages/home-decor.html">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ed9ac004-c442-446d-bf09-4b405867b868.png"
+            alt="Black USB safety hammer flashlight for breaking car window on dark background" loading="lazy" />
+          <p class="item-title">Torches</p>
+          <p class="item-subtitle" style="color: #047857">Special offer</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+    <section class="ad1-container">
+    <img src="images/oil-adv.png" alt="Adv" id="ad2-img">
+  </section>
+
+
+  <!-- Add after products section -->
+  <section class="section" id="how-it-works">
+    <h2 style="text-align: center; margin-bottom: 30px">How It Works</h2>
+    <div style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 40px;
+        ">
+      <div style="max-width: 250px; text-align: center">
+        <img src="https://img.icons8.com/ios-filled/100/2f3e2e/plant-under-sun.png" alt="Sourcing"
+          style="width: 60px; margin-bottom: 10px" />
+        <h4>Sourced from Nature</h4>
+        <p>
+          We partner with local farmers to bring you the freshest, purest
+          ingredients.
+        </p>
+      </div>
+      <div style="max-width: 250px; text-align: center">
+        <img src="https://img.icons8.com/ios-filled/100/2f3e2e/checked-2--v1.png" alt="Quality"
+          style="width: 60px; margin-bottom: 10px" />
+        <h4>Quality Checked</h4>
+        <p>
+          Every product is tested for purity and quality before it reaches
+          you.
+        </p>
+      </div>
+      <div style="max-width: 250px; text-align: center">
+        <img src="https://img.icons8.com/ios-filled/100/2f3e2e/delivery.png" alt="Delivery"
+          style="width: 60px; margin-bottom: 10px" />
+        <h4>Fast Delivery</h4>
+        <p>Get your order delivered quickly and safely to your doorstep.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <section class="section testimonials" id="testimonials">
+    <h2 style="text-align: center; margin-bottom: 30px">
+      What Our Customers Say
+    </h2>
+    <div style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 30px;
+        ">
+      <div style="
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+          ">
+        <p>"Absolutely love the herbal tea! Fresh and soothing."</p>
+        <strong>- Priya S.</strong>
+      </div>
+      <div style="
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+          ">
+        <p>"The coconut oil is pure and smells amazing. Highly recommend!"</p>
+        <strong>- Rahul M.</strong>
+      </div>
+      <div style="
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+          ">
+        <p>"Fast delivery and great packaging. Will order again."</p>
+        <strong>- Anjali K.</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="section newsletter" id="newsletter">
+    <h2 style="text-align: center; margin-bottom: 20px">Stay Updated!</h2>
+    <p style="text-align: center; margin-bottom: 20px">
+      Subscribe to our newsletter for offers and wellness tips.
+    </p>
+    <form style="
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          flex-wrap: wrap;
+        ">
+      <input type="email" placeholder="Your email" style="
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            min-width: 220px;
+          " />
+      <button type="submit" class="cta">Subscribe</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box about">
+        <h2>Organic Farm</h2>
+        <p>
+          We provide fresh, organic, and healthy food directly from the farm
+          to your table.
+        </p>
+      </div>
+      <div class="footer-box link-group">
+        <div class="footer-subbox">
+          <h2>HELP</h2>
+          <ul type="none">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Return & Cancellation</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </div>
+        <div class="footer-subbox">
+          <h2>Quick Links</h2>
+          <ul type="none">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Women Empowerment</a></li>
+            <li><a href="#">Our Story</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-container footer-second">
+
+      <div class="footer-box contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@organicfarm.com</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Location: India</p>
+        <p>Address: Mahadev Colony Senda Road ,Beawar,Rajasthan</p>
+      </div>
+
+      <div class="footer-box social">
+        <h2>Follow us</h2>
+        <div class="social-icons">
+          <i1 class="fa-brands fa-square-facebook"></i1>
+          <i2 class="fa-brands fa-instagram"></i2>
+          <i3 class="fa-brands fa-youtube"></i3>
+          <i4 class="fa-brands fa-square-twitter"></i4>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Organic Farm. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+<script src="js/script.js"></script>
+<script src="js/searchBar.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".product-connector").forEach(product => {
+      product.addEventListener("click", () => {
+        const url = product.getAttribute("data-url");
+        if (url) window.location.href = url;
+      });
+    });
+  });
+</script>
+
+</body>
+
+</html>
