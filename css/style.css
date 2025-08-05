@@ -11,6 +11,7 @@ body {
   color: #2b2b2b;
   background-attachment: fixed;
   background: rgba(250, 244, 235, 0.9);
+  width: 100%;
 }
 
 
@@ -135,7 +136,7 @@ body {
 }
 .slider-container {
   position: relative;
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   left: 50%;
   right: 50%;
@@ -152,7 +153,7 @@ body {
   width: 100%;
 }
 .slide {
-  min-width: 100vw;
+  min-width: 100%;
   box-sizing: border-box;
   position: relative;
 }

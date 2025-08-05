@@ -32,7 +32,7 @@ h2 {
   color:#2b2b2b;
   /* text-align: left; */
   width: 100%;
-  padding: 15px 18px;
+  padding: 15px 11px;
   height: 78px;
   display: flex;
   justify-content: space-between;
@@ -281,14 +281,14 @@ main.blurred::before {
 
   .header-row {
     display: flex;
-    width: 100%;
+    width: 70vmin;
     justify-content: space-between;
     align-items: flex-end;
   }
 
   .header-left {
     width: auto;
-    gap: 10px;
+    gap: 5px;
   }
 
   h2 {
@@ -297,8 +297,8 @@ main.blurred::before {
 
   #search-container {
     height: 34px;
-    min-width: 220px;
-    width: 50vmin;
+    min-width: 180px;
+    width: 30vmin;
   }
 
   nav {
