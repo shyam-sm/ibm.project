@@ -261,7 +261,7 @@ main.blurred::before {
 
 /* ===================== MOBILE RESPONSIVE ===================== */
 @media (max-width: 600px) {
-  header {
+  #nav-header {
     padding: 11px;
     height: auto;
   }
@@ -321,7 +321,6 @@ main.blurred::before {
   }
 
   .toggle-icon {
-    margin-top: 10px;
     display: flex;
     position: absolute;
     top: 24px;
