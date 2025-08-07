@@ -314,7 +314,6 @@ main.blurred::before {
   }
 
   #toggle-btn {
-
     display: flex;
     position: absolute;
     right: 20px;
